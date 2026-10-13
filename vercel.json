@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/skill.md", "destination": "https://raw.githubusercontent.com/shrey258/email-tracker/main/SKILL.md" },
+    { "source": "/SKILL.md", "destination": "https://raw.githubusercontent.com/shrey258/email-tracker/main/SKILL.md" }
+  ]
+}

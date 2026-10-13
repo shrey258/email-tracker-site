@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email tracker — your personal, invisible Gmail tracker</title>
+<meta name="description" content="A personal Gmail open and click tracker that leaves no badge, no signature, nothing for the recipient to see. Open source, self-hosted, set up by your agent in one paste.">
+<link rel="icon" href="favicon.svg">
+<link rel="preload" href="light.webp" as="image">
+<meta property="og:title" content="Email tracking that’s invisible">
+<meta property="og:description" content="A personal Gmail open and click tracker. No signature, nothing added to your email. Open source, on your own server.">
+<meta property="og:image" content="https://emailtracker.shrey258.com/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<noscript><style>.blank span, .pill .caret, .pill code, .sub, .points li { opacity: 1; filter: none; transform: none; }</style></noscript>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="light" aria-hidden="true"></div>
+
+<main>
+  <section class="hero">
+    <h1>Email tracking that’s <button class="blank" type="button" aria-label="invisible"><span>invisible</span></button></h1>
+
+    <div class="pill">
+      <span class="caret" aria-hidden="true">❯</span>
+      <code title="Set up this email tracker: https://emailtracker.shrey258.com/skill.md">Set up this email tracker: <span class="url">emailtracker.shrey258.com/skill.md</span></code>
+      <button class="copy" type="button" aria-label="Copy setup prompt">
+        <svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <svg class="icon-done" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </button>
+    </div>
+    <p class="sub">Paste it into Claude Code, Codex or Cursor.</p>
+    <p class="sr-only" role="status"></p>
+
+    <ul class="points">
+      <li><strong>No signature</strong><span>Your email goes out as you wrote it</span></li>
+      <li><strong>Link clicks</strong><span>See which links they clicked</span></li>
+      <li><strong>Your reads don’t count</strong><span>Not even on your phone</span></li>
+      <li><strong>Ticks in Gmail</strong><span>✓✓ in Sent once it’s read</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer>Free and open source · runs on your own server · <a href="https://github.com/shrey258/email-tracker">★ Star on GitHub</a></footer>
+
+<script src="landing.js"></script>
+</body>
+</html>
