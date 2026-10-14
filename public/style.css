@@ -111,7 +111,7 @@ h1 {
 .blank span {
   opacity: 0;
   filter: blur(8px);
-  transition: opacity 700ms var(--ease) 400ms, filter 700ms var(--ease) 400ms;
+  transition: opacity 700ms var(--ease) 150ms, filter 700ms var(--ease) 150ms;
 }
 
 
@@ -129,7 +129,7 @@ h1 {
 
 .lit .pill .caret,
 .lit .pill code,
-.lit .sub { animation: clear 600ms var(--ease) 850ms both; }
+.lit .sub { animation: clear 600ms var(--ease) 600ms both; }
 
 @keyframes clear {
   to { opacity: 1; filter: none; }
@@ -241,7 +241,7 @@ h1 {
 .points strong { display: block; font: 400 18px/1.3 var(--serif); color: var(--ink); }
 .points span { display: block; margin-top: 6px; font-size: 13px; color: var(--muted); white-space: nowrap; }
 
-.lit .points li { animation: surface 700ms var(--ease) calc(1200ms + var(--i) * 120ms) both; }
+.lit .points li { animation: surface 700ms var(--ease) calc(950ms + var(--i) * 120ms) both; }
 .points li:nth-child(2) { --i: 1; }
 .points li:nth-child(3) { --i: 2; }
 .points li:nth-child(4) { --i: 3; }

@@ -1,5 +1,5 @@
 const PROMPT = 'Set up this email tracker: https://emailtracker.shrey258.com/skill.md';
-const AUTO_REVEAL_MS = 4000;
+const AUTO_REVEAL_MS = 2500;
 
 function reveal() {
   document.body.classList.add('lit');
