@@ -1,8 +1,10 @@
 const PROMPT = 'Set up this email tracker: https://emailtracker.shrey258.com/skill.md';
 const AUTO_REVEAL_MS = 2500;
 
-function reveal() {
+function reveal(e) {
+  if (document.body.classList.contains('lit')) return;
   document.body.classList.add('lit');
+  track('revealed', { how: e?.type ?? 'timer' });
 }
 
 const blank = document.querySelector('.blank');
@@ -88,7 +90,9 @@ copy.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(PROMPT);
     showCopied();
+    track('prompt_copied', { how: 'clipboard' });
   } catch {
     selectPrompt();
+    track('prompt_copied', { how: 'selected' });
   }
 });
