@@ -6,6 +6,27 @@ function reveal() {
 }
 
 const blank = document.querySelector('.blank');
+const light = document.querySelector('.light');
+
+const beamX = (v) => 0.6525 - 0.294 * v;
+
+function aimLight() {
+  const word = blank.getBoundingClientRect();
+  const x = word.left + word.width / 2;
+  const y = word.top + word.height / 2;
+  let size = Math.max(innerWidth * 1.1, innerHeight * 1.6, y / 0.225);
+  for (let i = 0; i < 3; i++) {
+    const u = beamX(y / (0.75 * size));
+    size = Math.max(size, x / u, (innerWidth - x) / (1 - u));
+  }
+  const left = x - beamX(y / (0.75 * size)) * size;
+  light.style.setProperty('--light-size', `${size}px auto`);
+  light.style.setProperty('--light-x', `${left}px`);
+  light.style.setProperty('--source-x', `${left + 0.6525 * size}px`);
+}
+
+aimLight();
+addEventListener('resize', aimLight);
 blank.addEventListener('pointerenter', reveal);
 blank.addEventListener('click', reveal);
 blank.addEventListener('focus', reveal);

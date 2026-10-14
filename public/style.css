@@ -45,9 +45,9 @@ body {
   position: fixed;
   inset: 0 0 auto 0;
   height: 120svh;
-  background: url(light.webp) 70% 0 / cover no-repeat;
+  background: url(light.webp) var(--light-x, 70%) 0 / var(--light-size, cover) no-repeat;
   mask-image:
-    radial-gradient(circle at 68% -10%, #000 calc(var(--reach) - 30%), transparent var(--reach)),
+    radial-gradient(circle at var(--source-x, 68%) -10%, #000 calc(var(--reach) - 30%), transparent var(--reach)),
     linear-gradient(to bottom, #000 45%, rgb(0 0 0 / 0.74) 60%, rgb(0 0 0 / 0.42) 73%, rgb(0 0 0 / 0.16) 86%, transparent);
   mask-composite: intersect;
   opacity: 0;
